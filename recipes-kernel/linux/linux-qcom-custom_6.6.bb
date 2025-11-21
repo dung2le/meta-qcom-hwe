@@ -23,6 +23,9 @@ SRC_URI = "${SRCPROJECT};branch=${SRCBRANCH};destsuffix=kernel \
            file://0001-QCLINUX-Add-support-to-compile-msm_display.ko.patch \
            file://0002-QCLINUX-lt9611uxc-changes-to-include-htotal-and-vtot.patch \
            file://0003-QCLINUX-arm64-qcom_defconfig-Enable-EXT4_FS_SECURITY.patch \
+           file://0004-patch01.patch \
+           file://0005-UPSTREAM-wcn6750-pmu_patch02.patch \
+           file://0006-patch04.patch \
            "
 
 S = "${WORKDIR}/kernel"
@@ -49,6 +52,7 @@ KERNEL_MODULE_AUTOLOAD += "coresight-replicator coresight-etm4x coresight-stm"
 KERNEL_MODULE_AUTOLOAD += "coresight-cti coresight-tpdm coresight-tpda coresight-dummy"
 KERNEL_MODULE_AUTOLOAD += "coresight-remote-etm coresight-tgu"
 KERNEL_MODULE_AUTOLOAD += "stm_core stm_p_ost stm_console stm_heartbeat stm_ftrace "
+KERNEL_MODULE_AUTOLOAD += "pwrseq-qcom-wcn icnss2"
 
 # IPA
 KERNEL_MODULE_AUTOLOAD += "ipa"

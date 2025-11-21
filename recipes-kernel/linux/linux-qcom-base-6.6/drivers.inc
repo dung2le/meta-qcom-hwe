@@ -2,7 +2,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/drivers:"
 
 SRC_URI:append = " \
-    file://qcs6490/0008-UPSTREAM-fix-pwseq.patch \
     file://qcs6490/0001-phy-qcom-qmp-ufs-Add-Phy-Configuration-support-for-S.patch \
     file://qcs9100/0001-FROMLIST-remoteproc-qcom_q6v5_pas-Add-support-for-SA.patch \
     file://qcs9100/0002-FROMLIST-soc-qcom-socinfo-add-QCS9100-ID.patch \

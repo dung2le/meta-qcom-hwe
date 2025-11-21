@@ -1,0 +1,66 @@
+diff -rupN a/arch/arm64/boot/dts/qcom/qcs6490-rb3gen2.dts b/arch/arm64/boot/dts/qcom/qcs6490-rb3gen2.dts
+--- a/arch/arm64/boot/dts/qcom/qcs6490-rb3gen2.dts	2025-11-24 13:12:00.923222446 +0000
++++ b/arch/arm64/boot/dts/qcom/qcs6490-rb3gen2.dts	2025-11-24 13:14:34.796014475 +0000
+@@ -77,6 +77,62 @@
+ 		regulator-max-microvolt = <1200000>;
+ 	};
+ 
++	wcn6750-pmu {
++		compatible = "qcom,wcn6750-pmu";
++		pinctrl-names = "default";
++		pinctrl-0 = <&bt_en>;
++		vddaon-supply = <&vreg_s7b_0p972>;
++		vddasd-supply = <&vreg_l11c_2p8>;
++		vddpmu-supply = <&vreg_s7b_0p972>;
++		vddrfa0p8-supply = <&vreg_s7b_0p972>;
++		vddrfa1p2-supply = <&vreg_s8b_1p272>;
++		vddrfa1p7-supply = <&vreg_s1b_1p872>;
++		vddrfa2p2-supply = <&vreg_s1c_2p19>;
++
++		bt-enable-gpios = <&tlmm 85 GPIO_ACTIVE_HIGH>;
++
++		regulators {
++			vreg_pmu_rfa_cmn: ldo0 {
++				regulator-name = "vreg_pmu_rfa_cmn";
++			};
++
++			vreg_pmu_aon_0p59: ldo1 {
++				regulator-name = "vreg_pmu_aon_0p59";
++			};
++
++			vreg_pmu_wlcx_0p8: ldo2 {
++				regulator-name = "vreg_pmu_wlcx_0p8";
++			};
++
++			vreg_pmu_wlmx_0p85: ldo3 {
++				regulator-name = "vreg_pmu_wlmx_0p85";
++			};
++
++			vreg_pmu_btcmx_0p85: ldo4 {
++				regulator-name = "vreg_pmu_btcmx_0p85";
++			};
++
++			vreg_pmu_rfa_0p8: ldo5 {
++				regulator-name = "vreg_pmu_rfa_0p8";
++			};
++
++			vreg_pmu_rfa_1p2: ldo6 {
++				regulator-name = "vreg_pmu_rfa_1p2";
++			};
++
++			vreg_pmu_rfa_1p7: ldo7 {
++				regulator-name = "vreg_pmu_rfa_1p7";
++			};
++
++			vreg_pmu_pcie_0p9: ldo8 {
++				regulator-name = "vreg_pmu_pcie_0p9";
++			};
++
++			vreg_pmu_pcie_1p8: ldo9 {
++				regulator-name = "vreg_pmu_pcie_1p8";
++			};
++		};
++	};
+ 	pmic-glink {
+ 		compatible = "qcom,sm8350-pmic-glink", "qcom,pmic-glink";
+ 		#address-cells = <1>;
