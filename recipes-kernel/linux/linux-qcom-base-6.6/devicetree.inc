@@ -3,6 +3,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/devicetree:"
 
 # qcs6490 dtsi patches
 SRC_URI:append = " \
+    file://qcs6490/0019-patch02.patch \
     file://qcs6490/0001-arm64-dts-qcom-sc7280-Add-UFS-nodes-for-sc7280-soc.patch \
     file://qcs6490/0001-arm64-dts-qcom-sc7280-Move-video-firmware-to-chrome-.patch \
     file://qcs6490/0001-arm64-dts-qcom-Use-QCOM_SCM_VMID-defines-for-qcom-vm.patch \
@@ -15,6 +16,8 @@ SRC_URI:append = " \
 
 # qcs6490 board dts patches
 SRC_URI:append = " \
+    file://qcs6490/0020-UPSTREAM-wcn6750-pmu.patch \
+    file://qcs6490/0019-patch02.patch \
     file://qcs6490/0001-arm64-dts-qcom-Add-base-qcm6490-idp-board-dts.patch \
     file://qcs6490/0002-arm64-dts-qcom-Add-base-qcs6490-rb3gen2-board-dts.patch \
     file://addons/0019-QCLINUX-arm64-dts-qcom-Add-board-id-and-msm-id-for-R.patch \

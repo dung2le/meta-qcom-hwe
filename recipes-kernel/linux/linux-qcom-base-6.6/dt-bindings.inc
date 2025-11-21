@@ -2,6 +2,7 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/dt-bindings:"
 
 SRC_URI:append = " \
+    file://qcs6490/0007-patch01.patch \
     file://qcs6490/0001-dt-bindings-phy-Add-QMP-UFS-PHY-comptible-for-SC7280.patch \
     file://qcs6490/0001-dt-bindings-arm-qcom-Add-QCM6490-Fairphone-5.patch \
     file://qcs6490/0001-dt-bindings-arm-qcom-Add-QCM6490-IDP-and-QCS6490-RB3.patch \
